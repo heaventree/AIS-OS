@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/lib/supabase.ts","./src/pages/Connections.tsx","./src/pages/Dashboard.tsx","./src/pages/Decisions.tsx","./src/pages/Framework.tsx","./src/pages/Onboard.tsx"],"version":"5.8.3"}

@@ -1,0 +1,153 @@
+.dashboard { display: flex; flex-direction: column; gap: 32px; }
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.page-header-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: var(--color-primary-dim);
+  border: 1px solid var(--color-primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  color: var(--color-text-2);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+}
+
+.dashboard-card:hover { background: var(--color-surface-2); }
+.dashboard-card.color-blue:hover { border-color: var(--color-primary-border); }
+.dashboard-card.color-green:hover { border-color: rgba(16,185,129,0.35); }
+.dashboard-card.color-cyan:hover { border-color: rgba(6,182,212,0.35); }
+.dashboard-card.color-amber:hover { border-color: rgba(245,158,11,0.35); }
+
+.dashboard-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.dashboard-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-blue .dashboard-card-icon { background: var(--color-primary-dim); color: var(--color-primary); }
+.color-green .dashboard-card-icon { background: var(--color-success-dim); color: var(--color-success); }
+.color-cyan .dashboard-card-icon { background: var(--color-accent-dim); color: var(--color-accent); }
+.color-amber .dashboard-card-icon { background: var(--color-warning-dim); color: var(--color-warning); }
+
+.dashboard-card-arrow { color: var(--color-text-3); transition: transform 0.15s; }
+.dashboard-card:hover .dashboard-card-arrow { transform: translateX(3px); color: var(--color-text-2); }
+
+.dashboard-card-title { font-size: 15px; font-weight: 600; }
+.dashboard-card-desc { font-size: 13px; color: var(--color-text-2); line-height: 1.5; flex: 1; }
+.dashboard-card-cta { font-size: 12px; color: var(--color-text-3); font-weight: 500; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.panel-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--color-text-2);
+}
+
+.checklist-item svg { color: var(--color-text-3); flex-shrink: 0; }
+.checklist-item.done { color: var(--color-text-3); text-decoration: line-through; }
+.checklist-item.done svg { color: var(--color-success); }
+
+.principles { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.principle-item {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--color-text-2);
+  line-height: 1.5;
+}
+
+.principle-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-3);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.trademark-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+  font-size: 11px;
+  color: var(--color-text-3);
+  font-style: italic;
+}
